@@ -1,0 +1,341 @@
+Python Programming - 8.11.2022
+Basic Programs:
+1.	Python program to print Hello World
+2.	Write a function that displays "Hello name", for any given name passed to it.
+3.	Write a program that prompts the user to enter the first name and the last name. Then display the following message.
+Hello firstname lastname
+Operators
+1.	Python program to add two numbers
+2.	Python Program for factorial of a number
+3.	Python Program for simple interest
+4.	Python Program for compound interest
+5.	Python Program to check Armstrong Number
+6.	Python Program for Program to find area of a circle
+7.	Python program to print all Prime numbers in an Interval
+8.	Python program to check whether a number is Prime or not
+9.	Program to print ASCII Value of a character
+10.	Python Program for Sum of squares of first n natural numbers
+11.	Python Program for cube sum of first n natural numbers
+12.	Python program to check if a number is positive or negative
+13.	Python program to check leap year
+14.	Python Program to check even or odd number
+15.	Python program to convert Decimal to binary
+16.	Python program to find factorial of a number
+17.	Write a program to convert an integer into the corresponding floating point number.
+18.	Write a program to calculate the distance between two points.
+19.	A video library rents new videos for Rs.75 a day, and old movies for Rs.50 a day. 
+	Write a program to calculate the total charge for a customer's video rentals. 
+	The program should prompt the user for the number of each type of video and output the total cost.
+20.	Momentum is calculated as e = mc2, where m is the mass of the object and c is its velocity. 
+	Write a program that accepts an object's mass and and velocity and displays its momentum.
+21.	Write a program that prompts user to enter numbers. 
+	The process will repeat until user enters -1. 
+	Finally, the program prints the count of even and odd numbers entered.
+
+22.	Write a program that prints numbers from 20 to 1 ( counts downwards).
+23.	Evaluate the following arithmetic expressions using the rules of operator precedence in Python.
+a.	20//4*2
+b.	50%7
+c.	-(100/6)+5
+
+24.	Write a program that displays all the numbers from 1-100 that are not divisible by 2 as well as by 4.
+
+
+
+1.
+print("Hello World")
+
+2.
+def name_func(fname):
+  print("Hello" ,fname)
+name_func("srini")
+
+
+3.
+x=input("Enter your first name :");
+y=input("Enter your last name :");
+print("Hello ", x +" "+ y);
+
+
+
+1.
+a=int(input("Enter the value of A :"))
+b=int(input("Enter the value of B :"))
+c=a+b
+print("Addition of A and B is :", c)
+
+
+2.
+n = int(input("Enter the value of N :"))
+fact = 1
+for i in range(1,n+1):
+	fact = fact * i
+	
+print ("The factorial of" ,n, "is :",fact)
+
+
+3.
+p=int(input("Enter the Principal amount :"))
+n=int(input("Enter the no of years :"))
+r=float(input("Enter the rate of intrest :"))
+si=(p*n*r)/100
+print("The simple intrest is : ",si)
+
+
+4.
+p=int(input("Enter the principal amount :"))
+t=int(input("Enter the timespan (years) :"))
+r=float(input("Enter the rate of intrest :")) 
+a=p*(1+(r/100))**t 
+ci=a-p 
+print("The Compoun Intrest is : ",int(ci))
+
+
+5.
+num = int(input("Enter a number: "))
+sum = 0
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum =sum + digit ** 3
+   temp =temp//10
+   
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+
+6.
+r=int(input("Enter the radius of the circle :"))
+pi=3.14
+area=pi*r*r
+print("The area of the circle is :",area)
+
+
+
+7.
+start=int(input("Enter the starting value :"))
+end=int(input("Enter the ending value :"))
+for n in range(start,end+1):
+      if n>1:
+        for i in range(2,n):
+            if (n%i)==0:
+                break
+        else:
+            print(n)
+
+8.
+n=int(input("Enter the number :"))
+if n > 1:
+    for i in range(2, int(n/2)+1):
+        if (n % i) == 0:
+            print(n, "is not a prime number")
+            break
+    else:
+        print(n, "is a prime number")
+else:
+    print(n, "is not a prime number")
+
+
+9.
+char=input("Enter the Character :")
+print("The ASCII value of " +char+ " is ", ord(char))
+
+
+10.
+n=int(input("Enter the n no of number :"))
+sum=0
+for i in range(1,n+1):
+    sum=sum+(i**2)
+print("The sum of square of first " , n , " natural number is ",sum)
+
+
+11.
+n=int(input("Enter the n no of number :"))
+sum=0
+for i in range(1,n+1):
+    sum=sum+(i**3)
+print("The sum of cube of first " , n , " natural number is ",sum)
+
+
+12.
+n=int(input("Enter the number :"))
+if n>0:
+    print(n," is a positive number")
+elif n<0:
+    print(n," is a negative number")
+else:
+    print(n," is neither negative nor positive")
+
+
+
+13.
+year = int(input("Enter a year :"))
+
+# divided by 100 means century year (ending with 00)
+# century year divided by 400 is leap year
+if (year % 400 == 0) and (year % 100 == 0):
+    print(year,"is a leap year")
+
+# not divided by 100 means not a century year
+# year divided by 4 is a leap year
+elif (year % 4 ==0) and (year % 100 != 0):
+    print(year,"is a leap year")
+
+# if not divided by both 400 (century year) and 4 (not century year)
+# year is not leap year
+else:
+    print(year,"is not a leap year")
+
+
+14.
+n=int(input("Enter the number :"))
+if n<=0:
+    print("zero or negative number")
+    
+else:
+    if(n%2)==0:
+        print(n,"is a even number")
+    else:
+        print(n,"is odd number")
+
+15.
+# Function to print binary number using recursion
+def convertToBinary(n):
+   if n > 1:
+       convertToBinary(n//2)
+   print(n % 2,end = '')
+
+# decimal number
+dec = int(input("Enter the decimal number :"))
+print("The binary value of " ,dec, " is :" )
+convertToBinary(dec)
+
+
+16.
+
+import math
+num = int(input("Enter the value of N :"))
+fact=math.factorial(num)
+print("Factorial of", num, "is",fact)
+      
+
+
+17.
+number = int(input('Enter an integer number: '))
+
+new_number = float(number)
+
+print('Original Number:', number)
+
+print('After converting to float:', new_number)
+
+
+18.
+# Import math Library
+#import math
+#p = [3]
+#q = [1]
+
+# Calculate Euclidean distance
+#print (math.dist(p, q))
+
+#p = [3, 3]
+#q = [6, 12]
+
+# Calculate Euclidean distance
+#print (math.dist(p, q))
+
+import math
+
+x1=int(input("Enter the value of X1 :"))
+y1=int(input("Enter the value of y1 :"))
+x2=int(input("Enter the value of X2 :"))
+y2=int(input("Enter the value of y2 :"))
+distance=math.sqrt( ((x2 - x1)**2) +((y2 - y1)**2) ) 
+print("Distance is :",distance)
+
+
+
+19.
+new_videos = int(input("Enter the number of new videos: "))
+old_videos = int(input("Enter the number of old videos: "))
+
+days = int(input("Enter the number of days rented: "))
+sum = (new_videos*75) + (old_videos*50)
+total_cost = (sum*days)
+print("The total cost  is","INR",total_cost)
+
+
+20.
+mass = float(input("Enter mass in kgs: "))  # m is mass in kgs
+velocity = float(input("Enter velocity in m/s: ")) # c is velocity in m/s
+momentum = mass*(velocity**2)    # e=mc2
+print('Momentum of the object is', momentum ,"kg m/s")
+#except ValueError:
+#print("Enter mass and velocity in int/float")
+
+
+
+21.
+odd_count = 0
+even_count = 0
+
+while True:
+    num = int(input("Input an integer (-1 terminates): "))
+    if num == -1:
+        break
+    if num < 1:
+        continue
+    if num % 2 == 0:
+        even_count += 1
+        
+    if num %2==1:
+        odd_count += 1
+        
+
+print("Even count:", even_count)
+print("Odd count:", odd_count)
+
+
+22.
+#n=20
+#for i in reversed(range(n+1)):
+    #print(i)
+
+for i in range(20,0,-1):
+    print(i)
+
+
+23.
+#Evaluate the following arithmetic expressions using the rules of operator precedence in Python.
+#a.20//4*2
+#b. 50%7
+#c. -(100/6)+5
+
+a=20//(4*2)
+b=50%7
+c=(-(100/6))+5
+print("Answer of A :",a)
+print("Answer of B :",b)
+print("Answer of C :",c)
+
+
+24.
+# input the maximum number to
+# which you want to send
+
+print("Numbers not divisible by 2 and 4 from 1 to 100: ")
+
+for i in range(1, 100, 2):
+	
+	# check if number is not divisible by 2 and 4
+	if (i % 2 != 0) &(i %4 !=0):
+		print(i)
+
+
+
+
+
+
