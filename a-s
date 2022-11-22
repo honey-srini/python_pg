@@ -1,0 +1,160 @@
+Lab II – 15.11.2022
+Python programming using simple statements and expressions.
+
+a.	Write a program to enter two integers and then perform all arithmetic operations on them
+b.	Write a program to enter two floating point numbers and then perform all arithmetic operations on them
+c.	Write a python program to perform string concatenation, Identify the variant forms of python code to concatenate strings.
+d.	Write a python program to demonstrate printing a string within single, double and triple quotes.
+e.	Write a python program to print the ascii value of a character.
+f.	Write a python program to read a character in uppercase and then print it in lower case.
+g.	Write a python program to swap two numbers using a temporary variable.
+h.	Write a python program to demonstrate implicit conversion.
+i.	Write a python program to demonstrate explicit conversion.
+j.	Write a program that reads the address of a user. Display the result by breaking it in multiple lines.
+k.	Write a python program to read two floating point numbers. Add these numbers and assign the result to an integer.
+l.	Write a python program to calculate simple interest and compound interest.
+m.	Write a python program that prompts the user to enter two integers x and y. The program then calculates and displays xy.
+n.	Write a python program that prompts user to enter his first name and last name and then displays a message “Greetings!!!Firstname Lastname”.
+o.	Write a program to calculate salary of an employee given his basic pay (to be entered by the user), HRA = 10% of basic pay, TA = 5% of basic pay. Define HRA and TA as constants and use them to calculate the salary of the employee.
+p.	Write a program to prepare a grocery bill, enter the name of the items purchased, quantity in which it is purchased, and its price per unit. Display the bill in the following format.
+***************************BILL*************************
+Item Names			Item Quantity		Item Price
+Biscuits				6				120
+*********************************************************Total Amount to be paid
+*********************************************************
+q.	Momentum is calculated as e=mc2, m is the mass of the object, v is the velocity. Write a python program that accepts an object’s mass in kg(kilograms) and velocity in meters per second and display its momentum.
+r.	Write a program that calculates the number of seconds in a day.
+s.	Write a program that prompts the user to enter the first name and his last name. Then display the following message
+Hello first name last name
+Welcome to Python!
+
+
+a.
+num1 = int(input('Enter first number: '))  
+num2 = int(input('Enter second number: '))  
+ 
+add = num1 + num2   
+sub = num1 - num2   
+mul = num1 * num2   
+div = num1 / num2
+
+print('The addition of {0} and {1} is {2}'.format(num1, num2,add))  
+print('The subtraction of {0} and {1} is {2}'.format(num1, num2,sub)) 
+print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))
+print('The division of {0} and {1} is {2}'.format(num1, num2, div))
+
+
+b.
+num1 = float(input('Enter first number: '))  
+num2 = float(input('Enter second number: '))  
+ 
+add = num1 + num2   
+sub = num1 - num2   
+mul = num1 * num2   
+div = num1 / num2
+
+print('The addition of {0} and {1} is {2}'.format(num1, num2,add))  
+print('The subtraction of {0} and {1} is {2}'.format(num1, num2,sub)) 
+print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))
+print('The division of {0} and {1} is {2}'.format(num1, num2, div))
+
+
+c.
+var1 = "Hello"
+var2 = "World"
+
+print(var1 + var2)
+print(var1, var2)
+print(" ".join([var1, var2]))
+print("% s % s" % (var1, var2))
+print("{} {}".format(var1, var2))
+
+
+d.
+print('Hello World!')
+print("Hello World!!")
+print('''Hello World !!!
+Welcome to python,
+Have a nice day''')
+
+
+e.
+
+
+
+f.
+char = input("Enter the Character in upper case: ")
+lower= char.lower()
+print("Lowercase of",char,"is:",lower)
+
+
+g.
+x = input('Enter value of x: ')
+y = input('Enter value of y: ')
+
+print('The value of x :',x)
+print('The value of y :',y)
+
+temp = x
+x = y
+y = temp
+
+print('The value of x after swapping: ',x)
+print('The value of y after swapping: ',y)
+
+
+h.
+integer_number = 123
+float_number = 1.23
+print("value:",integer_number ,",Data Type:",type(integer_number))
+print("value:",float_number ,",Data Type:",type(float_number))
+
+new_number = integer_number + float_number
+# display new value and resulting data type
+print("After adding , Value:",new_number)
+print("Data Type:",type(new_number))
+
+
+i.
+num_string = '20'
+num_integer = 2
+
+print("Data type of num_string before Type Casting:",type(num_string))
+
+# explicit type conversion
+num_string = int(num_string)
+
+print("Data type of num_string after Type Casting:",type(num_string))
+
+num_sum = num_integer + num_string
+
+print("Sum:",num_sum)
+print("Data type of num_sum:",type(num_sum))
+
+
+j.
+
+k.
+x=float(input("Enter the value of X (floating point number) :"))
+y=float(input("Enter the value of Y (floating point number) :"))
+z=x+y
+z_int=int(z)
+print("Addition of X and Y :",z_int)
+
+
+l.
+
+
+m.
+x=int(input("Enter the value of X:"))
+y=int(input("Enter the value of y:"))
+z=x**y
+print(x,"power of ",y," is :",z)
+
+-----------------------------------
+
+
+
+
+
+
